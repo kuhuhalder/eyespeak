@@ -10,11 +10,10 @@ import "../css/Account.css";
  * @returns React component
  */
 const Account = (props) => {
-  // const location = useLocation();
+  const location = useLocation();
   const navigate = useNavigate();
-  // const [firstName, setFirstName] = useState(location.state.firstName);
-  // const [lastName, setLastName] = useState(location.state.lastName);
-  // const [email, setEmail] = useState(location.state.email);  
+  const [firstName, setFirstName] = useState(location.state.firstName);
+  const [lastName, setLastName] = useState(location.state.lastName);
   return (
     <Container>
       <Row>
@@ -22,13 +21,13 @@ const Account = (props) => {
       </Row>
       <Col>
         <h1>
-          {/* Welcome {firstName} {lastName}! */}
+          Welcome {firstName} {lastName}!
         </h1>
 
         <Button
           variant="primary"
           type="submit"
-          onClick={navigate("/buddies")}
+          onClick={()=>navigate("/buddies")}
         >
           Find Buddies
         </Button>
@@ -36,19 +35,20 @@ const Account = (props) => {
         <Button
           variant="primary"
           type="submit"
-          onClick={navigate("/audio-page")}
+          onClick={()=>navigate("/audio-page")}
         >
-          Summarize PDF
+          Summarize Audio
         </Button>
+        <p> (can include zoom audios)</p>
 
         <Button
           variant="primary"
           type="submit"
-          onClick={navigate("/pdf-page")}
+          onClick={()=>navigate("/pdf-page")}
         >
-          Summarize Audio
+          Summarize PDF
         </Button>
-        <p> (can include zoom videos)</p>
+      
         
        
       </Col>

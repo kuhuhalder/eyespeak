@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./css/Home.css";
+import banner from "./images/rutgers.png";
+
 /**
  * Home component to display the home page.
  * @param {*} props
@@ -11,6 +13,11 @@ const Home = (props) => {
   const navigate = useNavigate();
   return (
     <Container>
+       <Row>
+        <Col>
+        <img src={banner} alt="homeImage" />
+          </Col>
+      </Row>
       <Row>
         <Button
           variant="custom"
@@ -21,10 +28,7 @@ const Home = (props) => {
         >
 Register        </Button>
       </Row>
-      <Row>
-        <Col>
-          </Col>
-      </Row>
+     
     </Container>
   );
 };

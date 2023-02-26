@@ -52,18 +52,29 @@ function FileUploadAudio() {
     };
   
     const handleDownload = () => {
-    // Create a new jspdf instance
-    const doc = new jsPDF();
+      const doc = new jsPDF();
 
-    // Set document font and size
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(12);
-
-    // Add text to PDF
-    doc.text(summarizedText);
-
-    // Save and download the PDF file
-    doc.save('summary.pdf');
+      // Set document font and size
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(12);
+      
+      // Define the maximum width for the text
+      const maxWidth = 180;
+      
+      // Split the text into an array of strings that fit within the maximum width
+      const lines = doc.splitTextToSize(summarizedText, maxWidth);
+      
+      // Loop through each line of text and add it to the PDF
+      for (let i = 0; i < lines.length; i++) {
+        const text = lines[i];
+        const lineHeight = doc.getLineHeight();
+        const x = 20;
+        const y = 20 + (i * lineHeight);
+        doc.text(text, x, y);
+      }
+      
+      // Save and download the PDF file
+      doc.save('summary.pdf');
   };
 
      

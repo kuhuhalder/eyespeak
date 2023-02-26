@@ -17,20 +17,20 @@ function App() {
 <Row>
   <Col>
     <h1>Welcome to EyeSpeak</h1>
-    <p>We are a web app that .</p>
+    <img></img>
   </Col>
 </Row>
 </Container>
     <Router>
       <div>
         <Routes>
-          <Route exact path = "/" element = {<Account/>} />
+          <Route exact path = "/" element = {<Home/>} />
           <Route exact path = "/register" element = {<Register/>} />
           <Route exact path = "/login" element = {<Login/>} />
           <Route exact path = "/draganddrop" element = {<DragandDrop/>} />
           <Route exact path = "/audio-page" element = {<FileUploadAudio/>} />
           <Route exact path = "/pdf-page" element = {<FileUploadPDF/>} />
-          {/* <Route exact path = "/account" element = {<Account/>} /> */}
+          <Route exact path = "/account" element = {<Account/>} />
           <Route exact path = "/buddies" element = {<Buddies/>} />
           
         </Routes>

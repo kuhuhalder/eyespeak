@@ -10,11 +10,10 @@ import Account from "./Account";
  */
 export default function RegisterAdmin(props) {
   const navigate = useNavigate();
-  const [userName, setEmail] = useState("");
-  const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
+  const [email, setEmail] = useState("");
   const [register, setRegister] = useState(false);
   const [accExists, setAccExists] = useState(false);
   // handleRegister function is to call the add API to create an account for admin
@@ -22,61 +21,26 @@ export default function RegisterAdmin(props) {
     e.preventDefault();
     const configuration = {
       method: "post",
-      url: "http://localhost:8080/api/students/add",
+      url: "https://us-central1-sylvan-terra-379003.cloudfunctions.net/webApi/api/users",
       data: {
-        id,
-        userName,
-        password,
+        email,
         firstName,
         lastName,
+        password,
       },
     };
     console.log(configuration);
     axios(configuration)
       .then((result) => {
         setRegister(true);
+        navigate("/account", { state: { firstName:firstName, lastName:lastName } });
+
       })
       .catch((error) => {
         error = new Error();
         setAccExists(true);
       });
   };
-
-  if (register == true && userName.endsWith("@match.com")) {
-    <p className="text-success">You Are Registered Successfully as Admin!</p>;
-    navigate("/viewaccount", { state: { userName: userName } });
-  } else if (!userName.endsWith("@match.com")) {
-    <p className="text-danger">Please register with a @match.com email!</p>;
-  } else {
-    <p className="text-danger">
-      Username already exists! Login instead
-      <Button
-        onClick={() => {
-          navigate("/loginadmin");
-        }}
-      >
-        Login
-      </Button>
-    </p>;
-  }
-
-  if (accExists) {
-    return (
-      <div>
-        <p className="text-danger">
-          Username already exists! Login instead
-          <br></br>
-          <Button
-            onClick={() => {
-              navigate("/loginadmin");
-            }}
-          >
-            Login
-          </Button>
-        </p>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -87,10 +51,8 @@ export default function RegisterAdmin(props) {
           <Form.Control
             type="email"
             name="email"
-            value={userName}
             onChange={(e) => {
               setEmail(e.target.value);
-              setId(e.target.value);
             }}
             placeholder="Enter email"
           />
@@ -140,8 +102,6 @@ export default function RegisterAdmin(props) {
       <Link to="/login">
         Already have an account? Click here to login!
       </Link>
-
-      <Account></Account>
     </div>
   );
 }
