@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Project Files
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the source code for EyeSpeak, a web application that leverages advanced technologies to convert audio to text and PDF/Slides to well-formatted text for students with diverse needs. The following files are included in this repository:
 
-## Available Scripts
+# Account.js
 
-In the project directory, you can run:
+This file contains the source code for the account management functionality of the EyeSpeak web application.
 
-### `npm start`
+# Buddies.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This file contains the source code for the buddies management functionality of the EyeSpeak web application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# DragFiles.js
 
-### `npm test`
+This file contains the source code for the drag and drop functionality of the EyeSpeak web application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# DragandDrop.js
 
-### `npm run build`
+This file contains the source code for the drag and drop functionality of the EyeSpeak web application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# FileUploadAudio.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This file contains the source code for the audio file upload functionality of the EyeSpeak web application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# FileUploadPDF.js
 
-### `npm run eject`
+This file contains the source code for the PDF file upload functionality of the EyeSpeak web application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Login.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This file contains the source code for the login functionality of the EyeSpeak web application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Register.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This file contains the source code for the user registration functionality of the EyeSpeak web application.
