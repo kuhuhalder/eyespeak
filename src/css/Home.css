@@ -139,6 +139,8 @@
     align-items: center;
     justify-content: center;
     place-items: center;
+    box-shadow: #000;
+    
  }
   
  .color-nav {

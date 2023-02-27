@@ -32,7 +32,7 @@ function FileUploadAudio() {
           console.error(error);
         });
     };
-  
+    
     const handleSummarize = (event) => {
       event.preventDefault();
   
@@ -95,6 +95,11 @@ function FileUploadAudio() {
           <Button variant="primary" type="submit">
             Upload
           </Button>
+          {fileUploaded &&(
+            <p>File uploaded successfully!</p>
+          )
+          }
+          
         </Form>
         <Button variant="primary" onClick={handleSummarize} disabled={!fileUploaded}>
           Summarize

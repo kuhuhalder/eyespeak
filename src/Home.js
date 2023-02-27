@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./css/Home.css";
-import banner from "./images/rutgers.png";
+import banner from "./images/banner.png";
 
 /**
  * Home component to display the home page.
@@ -15,7 +15,8 @@ const Home = (props) => {
     <Container>
        <Row>
         <Col>
-        <img src={banner} alt="homeImage" />
+        
+        <img className = "banner" src={banner} alt="homeImage"  />
           </Col>
       </Row>
       <Row>
